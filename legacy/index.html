@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Belén Express - Bienvenidos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="stylo.css">
+
+</head>
+
+<body>
+
+    <nav class="navBar">
+        <div class="navContainer">
+            <a href="#" class="navLogo">
+                <img src="static/icons/logoFb.svg" alt="Farmacia Belén">
+            </a>
+            <div class="navUserGreeting">
+                <span class="greetingTitle"><strong>Buen día,</strong></span><span class="break"></span>
+                <span class="greetingName">María Teresa</span>
+            </div>
+            <div class="navSearch">
+                <form action="search.html" class="searchForm">
+                    <input type="text" name="q" placeholder="Busca por nombre o compuesto del medicamento"
+                        class="searchInput">
+                    <div class="containerButtomSearch">
+                        <button type="submit" class="buttomSearch">
+                            <div class="buttomSearchIcon"></div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="navActions">
+                <button class="accessclientBtn">
+                    <div class="iconAccessClient"></div>
+                    <p class="accesClientitle">Cliente</p>
+                </button>
+                <button class="cartBottom">
+                    <div class="iconbottomCart">
+                        <span class="cartBadge">3</span>
+                        <img src="static/icons/cartIcon.svg" alt="carrito de compras">
+                    </div>
+                    <p class="cartBottomtitle">Compras</p>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="debugLimitLine"></div>
+
+    <div class="newsToast">
+
+        <div class="icontoastCont">
+            <div class="iconToast"></div>
+        </div>
+
+        <div class="toastText">
+            <span class="toastTag">Aviso de Utilidad Pública</span>
+            <span class="toastText">Horario extendido hasta las 22:00 hrs</span>
+        </div>
+        <div class="toastcloseCont">
+            <button class="toastClose"></button>
+        </div>
+    </div>
+
+    <div class="shopCart">
+        <div class="shopcartContainer">
+
+            <div class="captionDisplay shopcartPadding">
+                <div class="captionsIcon iconShopcart"></div>
+                <p class="captionTitle shopcartTitlemaster">Tus Compras<span class="break"> en Belén</p>
+                <button class="shopcartClose">Cerrar X</button>
+                <p class="captionLead shopcartLeadmaster">Tienes <strong>3 productos en tu carrito</strong>
+                    verifica si esta correcta tu compra antes de continuar.
+                </p>
+            </div>
+            <div class="shopcartInfoCont">
+                <div class="shopcartProduct">
+                    <div class="shopcartProductList">
+
+                        <div class="cardShopcart">
+                            <button class="shopcartRemoveproduct"></button>
+                            <div class="shopcartProductImage">
+                                <div class="productFilter"></div>
+                                <img src="static/catalog/ibuprofeno.jpg" alt="Ibuprofeno 100 mg/5mL Suspensión 100 mL">
+                            </div>
+                            <div class="shopcartProductInfo">
+                                <div class="shopcartPriceCont">
+                                    <div class="shopcartPriceInfo">
+                                        <p class="shopcartProductLaboratory">Opko</p>
+                                        <p class="shopcartProductTitle">Ibuprofeno 100 mg/5mL Suspensión 100 mL</p>
+                                    </div>
+                                    <div class="shopcartData">
+                                        <div class="cantcontrolShopcart">
+                                            <button type="button" class="btn-menos shopcart"
+                                                data-producto="45k">−</button>
+                                            <input type="number" class="cantidadinputshopcart" id="cant-45k" value="88"
+                                                min="0" readonly>
+                                            <button type="button" class="btn-mas shopcart"
+                                                data-producto="45k">+</button>
+                                        </div>
+                                        <p class="shopcartProductPrice">$125.512</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardShopcart">
+                            <button class="shopcartRemoveproduct"></button>
+                            <div class="shopcartProductImage">
+                                <div class="productFilter"></div>
+                                <img src="static/catalog/lirex.jpg" alt="Lirex Tibolona 2,5 mg 30 Comprimidos">
+                            </div>
+                            <div class="shopcartProductInfo">
+                                <div class="shopcartPriceCont">
+                                    <div class="shopcartPriceInfo">
+                                        <p class="shopcartProductLaboratory">Silecia</p>
+                                        <p class="shopcartProductTitle">Lirex Tibolona 2,5 mg 30 Comprimidos</p>
+                                    </div>
+                                    <div class="shopcartData">
+                                        <div class="cantcontrolShopcart">
+                                            <button type="button" class="btn-menos shopcart"
+                                                data-producto="45k">−</button>
+                                            <input type="number" class="cantidadinputshopcart" id="cant-45k" value="88"
+                                                min="0" readonly>
+                                            <button type="button" class="btn-mas shopcart"
+                                                data-producto="45k">+</button>
+                                        </div>
+                                        <p class="shopcartProductPrice">$125.512</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardShopcart">
+                            <button class="shopcartRemoveproduct"></button>
+                            <div class="shopcartProductImage">
+                                <div class="productFilter"></div>
+                                <img src="static/catalog/lipoten.jpg"
+                                    alt="Lipoten Atorvastatina 40 mg 28 Comprimidos Recubiertos">
+                            </div>
+                            <div class="shopcartProductInfo">
+                                <div class="shopcartPriceCont">
+                                    <div class="shopcartPriceInfo">
+                                        <p class="shopcartProductLaboratory">Exeltis</p>
+                                        <p class="shopcartProductTitle">Lipoten Atorvastatina 40 mg 28 Comprimidos
+                                            Recubiertos</p>
+                                    </div>
+                                    <div class="shopcartData">
+                                        <div class="cantcontrolShopcart">
+                                            <button type="button" class="btn-menos shopcart"
+                                                data-producto="45k">−</button>
+                                            <input type="number" class="cantidadinputshopcart" id="cant-45k" value="88"
+                                                min="0" readonly>
+                                            <button type="button" class="btn-mas shopcart"
+                                                data-producto="45k">+</button>
+                                        </div>
+                                        <p class="shopcartProductPrice">$125.512</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shopcartTicket">
+                    <div class="shopcartTicketList">
+
+                        <div class="shopcartTicketTitle">
+                            <h3 class="shopcartTitle">Resumen de tu Compra</h3>
+                        </div>
+
+                        <div class="shopcartTicketDiscount">
+
+                            <div class="sctdProduct">
+                                <p class="sctdtextSub">Items</p>
+                                <p class="sctdnumSub">3</p>
+                            </div>
+
+                            <div class="sctdSubtotal">
+                                <p class="sctdtextSub">Subtotal</p>
+                                <p class="sctdnumSub">$135.576</p>
+                            </div>
+
+                            <div class="sctdDiscount">
+                                <p class="sctdtextSub">Descuento</p>
+                                <p class="sctdnumSub" style="color: #e52d27;">-$32.062</p>
+                            </div>
+
+                        </div>
+
+                        <div class="shopcartTicketPrice">
+                            <p class="sctdtextSub">Total</p>
+                            <p class="sctdtextTotal">$125.512</p>
+                        </div>
+
+                    </div>
+                    <div class="shopcartCheckoutContainer">
+                        <button class="shopcartCheckout">
+                            <p class="shopcartCheckoutText">ir al Sistema de
+                                Pago</p>
+                            <i class="bi bi-arrow-right-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main id="physicsRoot" class="physicsRoot">
+        <div id="physicsTrack" class="physicsTrack">
+
+            <div class="snapModule heroSlider">
+                <div class="contentWrapper sliderWrapper">
+                    <div class="modHero">
+
+                        <div class="modHeroCard modHeroCard--active colorSlideOne">
+
+
+                            <div class="heroInfo cardOne">
+                                <p class="heroDate">Hasta el 15 de Julio</p>
+                                <h2 class="heroTitle">Mes del cuidado<span class="break"></span> de la piel</span></h2>
+                                <h3 class="heroLead">Descuentos en todas las cremas y bloqueadores.</h3>
+                                <div class="buttomHero">
+                                    <p class="heroButtomtext">Ver Productos</p>
+                                </div>
+                            </div>
+
+                            <div class="bginfoHero bgOne"></div>
+
+                            <div class="heroImage">
+                                <img src="static/images/hero_slide_01.png" alt="Cremas y bloqueadores con descuentos"
+                                    class="heroImageMove">
+                            </div>
+
+                            <div class="heroGradientProtector"></div>
+
+                        </div>
+
+                        <div class="modHeroCard modHeroCard--next colorSlideTwo">
+
+                            <div class="heroInfo">
+                                <p class="heroDate">Hasta el 30 de Agosto</p>
+                                <h2 class="heroTitle">Bienvenidos a<span class="break"></span> nuestro sitio</span></h2>
+                                <h3 class="heroLead">Te regalamos un descuento en tu primera compra.</h3>
+                                <div class="buttomHero">
+                                    <p class="heroButtomtext">Ver Detalles</p>
+                                </div>
+                            </div>
+
+                            <div class="bginfoHero bgTwo"></div>
+
+                            <div class="heroImage">
+                                <img src="static/images/hero_slide_02.png" alt="Descuento primera compra"
+                                    class="heroImageMove">
+                            </div>
+
+                            <div class="heroGradientProtector"></div>
+
+                        </div>
+
+                        <div class="modHeroCard colorSlideFour">
+
+                            <div class="heroInfo cardFour">
+                                <p class="heroDate">Letus Labooratorio</p>
+                                <h2 class="heroTitle">Citrato de Magnesio<span class="break"></span> $12.990</span></h2>
+                                <h3 class="heroLead">Revitaliza tu cuerpo con Magnesio 400 mg.</h3>
+                                <div class="buttomHero">
+                                    <p class="heroButtomtext">Conoce más</p>
+                                </div>
+                            </div>
+
+                            <div class="bginfoHero bgFour"></div>
+
+                            <div class="heroImage">
+                                <img src="static/images/hero_slide_04.png" alt="Descuento primera compra"
+                                    class="heroImageMove">
+                            </div>
+
+                            <div class="heroGradientProtector"></div>
+
+                        </div>
+
+                        <div class="modHeroCard colorSlideThree">
+
+                            <div class="heroInfo cardThree">
+                                <p class="heroDate">Belen Express y Preferente</p>
+                                <h2 class="heroTitle">Recibe como<span class="break"></span> tú prefieras</span></h2>
+                                <h3 class="heroLead">Belén Express y Preferente, local o despacho.</h3>
+                                <div class="buttomHero">
+                                    <p class="heroButtomtext">Conoce más</p>
+                                </div>
+                            </div>
+
+                            <div class="bginfoHero bgThree"></div>
+
+                            <div class="heroImage">
+                                <img src="static/images/hero_slide_03.png" alt="Descuento primera compra"
+                                    class="heroImageMove">
+                            </div>
+
+                            <div class="heroGradientProtector"></div>
+
+                        </div>
+
+                        <div class="heroPreviews">
+                            <div class="heroPreview heroPreview--active previewColorOne">
+                                <img src="static/images/hero_slide_01.png" alt="Preview 1">
+                            </div>
+                            <div class="heroPreview previewColorTwo">
+                                <img src="static/images/hero_slide_02.png" alt="Preview 2">
+                            </div>
+                            <div class="heroPreview previewColorFour">
+                                <img src="static/images/hero_slide_04.png" alt="Preview 4">
+                            </div>
+                            <div class="heroPreview previewColorThree">
+                                <img src="static/images/hero_slide_03.png" alt="Preview 3">
+                            </div>
+                        </div>
+
+                        <div class="heroProgress">
+                            <div class="heroProgressBar"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="snapModule catTitle">
+                <div class="contentWrapper titleWrapper">
+                    <div class="captionsMaster">
+                        <div class="captionDisplay">
+                            <div class="captionsIcon iconCategories"></div>
+                            <p class="captionTitle">Categorías<span class="break"> destacadas</p>
+                            <div class="moreButtom">
+                                <p class="moreButtomtext">Ver más</p>
+                                <div class="iconSeemore"></div>
+                            </div>
+                            <p class="captionLead">Puedes selecciona una categoria, <strong>si necesitas buscar
+                                    tranquilo</strong>
+                                podrás encontrar el producto que buscas.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="snapModule catContent">
+                <div class="contentWrapper">
+                    <div class="categoriesContent">
+                        <ul class="categoriesLayout">
+
+                            <li class="categoriesButton">
+                                <div class="categoriesContainer">
+                                    <div class="categoriesButtom categoriesbutton">
+                                        <img class="categoriesButtomImage" src="static/images/CategoryImages_Baby.jpg"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <p class="categoriesTitleButton">Bebés</p>
+                            </li>
+
+                            <li class="categoriesButton">
+                                <div class="categoriesContainer">
+                                    <div class="categoriesButtom">
+                                        <img class="categoriesButtomImage"
+                                            src="static/images/CategoryImages_Natural.jpg" alt="">
+                                    </div>
+                                </div>
+                                <p class="categoriesTitleButton">Natural</p>
+                            </li>
+
+                            <li class="categoriesButton">
+                                <div class="categoriesContainer">
+                                    <div class="categoriesButtom">
+                                        <img class="categoriesButtomImage"
+                                            src="static/images/CategoryImages_Bioequivalente.jpg" alt="">
+                                    </div>
+                                </div>
+                                <p class="categoriesTitleButton">Bioequivalente</p>
+                            </li>
+
+                            <li class="categoriesButton">
+                                <div class="categoriesContainer">
+                                    <div class="categoriesButtom">
+                                        <img class="categoriesButtomImage"
+                                            src="static/images/CategoryImages_Belleza.jpg" alt="">
+                                    </div>
+                                </div>
+                                <p class="categoriesTitleButton">Belleza</p>
+                            </li>
+                            <li class="categoriesButton">
+                                <div class="categoriesContainer">
+                                    <div class="categoriesButtom">
+                                        <img class="categoriesButtomImage"
+                                            src="static/images/CategoryImages_Perfumeria.jpg" alt="">
+                                    </div>
+                                </div>
+                                <p class="categoriesTitleButton">Perfumeria</p>
+                            </li>
+                            <li class="categoriesButton">
+                                <div class="categoriesContainer">
+                                    <div class="categoriesButtom">
+                                        <img class="categoriesButtomImage"
+                                            src="static/images/CategoryImages_Veterinaria.jpg" alt="">
+                                    </div>
+                                </div>
+                                <p class="categoriesTitleButton">Veterinaria</p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="snapModule popTitle">
+
+                <div class="bannerBestsellers">
+                    <div class="bestsellersImage"></div>
+                    <div class="topBestsellers"></div>
+                </div>
+
+                <div class="contentWrapper bestSellers titleWrapper">
+                    <div class="captionsMaster bestellersMargin">
+                        <div class="captionDisplay">
+                            <div class="captionsIcon iconBestsellers"></div>
+                            <p class="captionTitle">Populares de<span class="break"> Belén.</p>
+                            <div class="moreButtom">
+                                <p class="moreButtomtext">Ver más</p>
+                                <div class="iconSeemore"></div>
+                            </div>
+                            <p class="captionLead">Estos productos son los que <strong>más compran nuestros
+                                    clientes</strong> Belén.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="snapModule popContentFull">
+                <div class="contentWrapper wrapperBestsellers">
+                    <div class="bestsellersProduct">
+
+                        <div class="cardproductMaster animationGrid">
+                            <div class="productButtom">
+                                <div class="productbuttomIcon"></div>
+                            </div>
+                            <a href="producto.html"
+                                style="text-decoration: none; color: inherit; display: block; height: 100%;">
+                                <div class="cardproductinfoMaster">
+
+                                    <div class="productcardImage">
+                                        <div class="productFilter"></div>
+                                        <img class="imgcardMaster" src="static/catalog/lirex.jpg"
+                                            alt="Lirex Tibolona 2,5 mg 30 Comprimidos">
+                                    </div>
+
+                                    <div class="cardproductInfo">
+                                        <div class="cardproductInfogrid">
+                                            <p class="productLaboratoryXl">Silesia</p>
+                                            <p class="productCategoriesXl babyColor">Bebes</p>
+                                            <div class="spacer"></div>
+                                            <h1 class="productcardTitle">Lirex Tibolona 2,5 mg 30 Comprimidos</h1>
+                                            <p class="productDiscountXl">-20%</p>
+                                            <p class="productOldpriceXl">$31.590</p>
+                                            <p class="productNewpriceXl">$25.272</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="cardproductMaster animationGrid">
+                            <div class="productButtom">
+                                <div class="productbuttomIcon"></div>
+                            </div>
+                            <div class="cardproductinfoMaster">
+
+                                <div class="productcardImage">
+                                    <div class="productFilter"></div>
+                                    <img class="imgcardMaster" src="static/catalog/ricino.jpg"
+                                        alt="Aceite De Ricino 99,5 Líquido 20 mL Genéricos">
+                                </div>
+
+                                <div class="cardproductInfo">
+                                    <div class="cardproductInfogrid">
+                                        <p class="productLaboratoryXl">Genéricos</p>
+                                        <p class="productCategoriesXl naturalColor">Natural</p>
+                                        <h1 class="productcardTitle">Aceite De Ricino 99,5 Líquido 20 mL Genéricos</h1>
+                                        <p class="productDiscountXl">-10%</p>
+                                        <p class="productOldpriceXl">$4.340</p>
+                                        <p class="productNewpriceXl">$3.906</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cardproductMaster animationGrid">
+                            <div class="productButtom">
+                                <div class="productbuttomIcon"></div>
+                            </div>
+                            <div class="cardproductinfoMaster">
+
+                                <div class="productcardImage">
+                                    <div class="productFilter"></div>
+                                    <img class="imgcardMaster" src="static/catalog/lipoten.jpg"
+                                        alt="Lipoten Atorvastatina 40 mg 28 Comprimidos Recubiertos">
+                                </div>
+
+                                <div class="cardproductInfo">
+                                    <div class="cardproductInfogrid">
+                                        <p class="productLaboratoryXl">Exeltis</p>
+                                        <p class="productCategoriesXl bioequivalenteColor">Bioequivalente</p>
+                                        <h1 class="productcardTitle">Lipoten Atorvastatina 40 mg 28 Comprimidos
+                                            Recubiertos</h1>
+                                        <p class="productDiscountXl">-26%</p>
+                                        <p class="productOldpriceXl">$138.582</p>
+                                        <p class="productNewpriceXl">$110.866</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cardproductMaster animationGrid">
+                            <div class="productButtom">
+                                <div class="productbuttomIcon"></div>
+                            </div>
+                            <div class="cardproductinfoMaster">
+
+                                <div class="productcardImage">
+                                    <div class="productFilter"></div>
+                                    <img class="imgcardMaster" src="static/catalog/simonds.jpg"
+                                        alt="Pantalla Solar Hipoalergénico 750 mL">
+                                </div>
+
+                                <div class="cardproductInfo">
+                                    <div class="cardproductInfogrid">
+                                        <p class="productLaboratoryXl">Simonds</p>
+                                        <p class="productCategoriesXl bellezaColor">Belleza</p>
+                                        <h1 class="productcardTitle">Pantalla Solar Hipoalergénico 750 mL</h1>
+                                        <p class="productDiscountXl">-23%</p>
+                                        <p class="productOldpriceXl">$19.490</p>
+                                        <p class="productNewpriceXl">$17.490</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cardproductMaster animationGrid">
+                            <div class="productButtom">
+                                <div class="productbuttomIcon"></div>
+                            </div>
+                            <div class="cardproductinfoMaster">
+
+                                <div class="productcardImage">
+                                    <div class="productFilter"></div>
+                                    <img class="imgcardMaster" src="static/catalog/magesio.jpg"
+                                        alt="Gea Magnesio 400 Mg 60 Cápsulas">
+                                </div>
+
+                                <div class="cardproductInfo">
+                                    <div class="cardproductInfogrid">
+                                        <p class="productLaboratoryXl">Labgea</p>
+                                        <p class="productCategoriesXl naturalColor">Natural</p>
+                                        <h1 class="productcardTitle">Gea Magnesio 400 Mg 60 Cápsulas</h1>
+                                        <p class="productDiscountXl">-30%</p>
+                                        <p class="productOldpriceXl">$14.290</p>
+                                        <p class="productNewpriceXl">$9.990</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cardproductMaster animationGrid">
+                            <div class="productButtom">
+                                <div class="productbuttomIcon"></div>
+                            </div>
+                            <div class="cardproductinfoMaster">
+
+                                <div class="productcardImage">
+                                    <div class="productFilter"></div>
+                                    <img class="imgcardMaster" src="static/catalog/neurobionta.jpg"
+                                        alt="Dolo Neurobionta Diclofenaco 50 mg 20 Comprimidos">
+                                </div>
+
+                                <div class="cardproductInfo">
+                                    <div class="cardproductInfogrid">
+                                        <p class="productLaboratoryXl">P&G</p>
+                                        <p class="productCategoriesXl babyColor">Bebes</p>
+                                        <h1 class="productcardTitle">Dolo Neurobionta Diclofenaco 50 mg 20 Comprimidos
+                                        </h1>
+                                        <p class="productDiscountXl">-10%</p>
+                                        <p class="productOldpriceXl">$21.990</p>
+                                        <p class="productNewpriceXl">$19.971</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="snapModule storeBelen">
+                <div class="contentWrapper">
+                    <div class="storebelenMaster">
+
+                        <div class="imgPharmCont">
+                            <img class="imageLocalPharm" src="static/images/farmacia_08.jpg" alt="farmacia belen">
+                        </div>
+
+                        <div class="storebelenContainer">
+
+                            <div class="infoUbicationCard">
+
+                                <div class="ubicationcardTop">
+
+                                    <div class="iconUbicationsearch">
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                    </div>
+
+                                    <div class="ubidataTopcont">
+                                        <p class="ubicationTitleText">Tu Belén más cercana</p>
+                                        <p class="ubicationComuna">Comuna de Conchalí</p>
+                                    </div>
+
+                                </div>
+                                <div class="ubicationcardDown">
+
+                                    <div class="ubidataContainer">
+                                        <div class="ubidataContleft">
+                                            <p class="ubicationInfoTitle">Dirección</p>
+                                        </div>
+                                        <div class="ubidataContright">
+                                            <p class="ubicationTextBallon">Av. Independencia 4884</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="ubidataContainer">
+                                        <div class="ubidataContleft">
+                                            <p class="ubicationInfoTitle">Atención</p>
+                                        </div>
+                                        <div class="ubidataContright">
+                                            <p class="ubicationTextBallon"> 09:00am</p>
+                                            <p class="ubicationTextBallon"> 21:00pm</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="ubidataContainer">
+                                        <div class="ubidataContleft">
+                                            <p class="ubicationInfoTitle">Teléfono</p>
+                                        </div>
+                                        <div class="ubidataContright">
+                                            <p class="ubicationTextBallon">(+56 2) 2771 2800</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="mapPharmgoogle">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d857.7546906548039!2d-70.68099183830907!3d-33.38485368517333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c687c54608d1%3A0x10e9c8f2a837ab44!2sFarmacia%20Belen!5e0!3m2!1ses!2scl!4v1777333276297!5m2!1ses!2scl"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="snapModule babyfferTitle">
+                <div class="contentWrapper titleWrapper">
+                    <div class="captionsMaster">
+                        <div class="captionDisplay">
+                            <div class="captionsIcon iconBabies"></div>
+                            <p class="captionTitle">Ofertas en<span class="break"> Bebés</p>
+                            <div class="moreButtom">
+                                <p class="moreButtomtext">Ver más</p>
+                                <div class="iconSeemore"></div>
+                            </div>
+                            <p class="captionLead">Te preparamos una selección de productos en bebés, con las
+                                <strong>mejores ofertas y descuentos</strong> para tus hijos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="snapModule babyfferContent">
+                <div class="contentWrapper">
+                    <div class="offerBabyMaster">
+
+                        <div class="sliderProduct slidebgBabies" id="slider-bebes" data-item-width-mobile="66"
+                            data-item-width-tablet="50" data-item-width-pc="25" data-show-items-pc="3">
+
+                            <button class="sliderBtn sliderPrev babiePrev" aria-label="Anterior slide">
+                                <i class="bi bi-chevron-left"></i>
+                            </button>
+                            <button class="sliderBtn sliderNext babieNext" aria-label="Siguiente slide">
+                                <i class="bi bi-chevron-right"></i>
+                            </button>
+
+                            <div class="sliderTrack">
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider babyColorbg">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/lirex.jpg"
+                                                    alt="Lirex Tibolona 2,5 mg 30 Comprimidos">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Silesia</p>
+                                                    <p class="productCategoriesXl babyColor">Bebes</p>
+                                                    <div class="spacer"></div>
+                                                    <h1 class="productcardTitle">Lirex Tibolona 2,5 mg 30
+                                                        Comprimidos
+                                                    </h1>
+                                                    <p class="productDiscountXl">-20%</p>
+                                                    <p class="productOldpriceXl">$31.590</p>
+                                                    <p class="productNewpriceXl">$25.272</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/ricino.jpg"
+                                                    alt="Aceite De Ricino 99,5 Líquido 20 mL Genéricos">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Genéricos</p>
+                                                    <p class="productCategoriesXl naturalColor">Natural</p>
+                                                    <h1 class="productcardTitle">Aceite De Ricino 99,5 Líquido 20 mL
+                                                        Genéricos</h1>
+                                                    <p class="productDiscountXl">-10%</p>
+                                                    <p class="productOldpriceXl">$4.340</p>
+                                                    <p class="productNewpriceXl">$3.906</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/lipoten.jpg"
+                                                    alt="Lipoten Atorvastatina 40 mg 28 Comprimidos Recubiertos">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Exeltis</p>
+                                                    <p class="productCategoriesXl bioequivalenteColor">Bioequivalente
+                                                    </p>
+                                                    <h1 class="productcardTitle">Lipoten Atorvastatina 40 mg 28
+                                                        Comprimidos
+                                                        Recubiertos</h1>
+                                                    <p class="productDiscountXl">-26%</p>
+                                                    <p class="productOldpriceXl">$138.582</p>
+                                                    <p class="productNewpriceXl">$110.866</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/simonds.jpg"
+                                                    alt="Pantalla Solar Hipoalergénico 750 mL">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Simonds</p>
+                                                    <p class="productCategoriesXl bellezaColor">Belleza</p>
+                                                    <h1 class="productcardTitle">Pantalla Solar Hipoalergénico 750 mL
+                                                    </h1>
+                                                    <p class="productDiscountXl">-23%</p>
+                                                    <p class="productOldpriceXl">$19.490</p>
+                                                    <p class="productNewpriceXl">$17.490</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/magesio.jpg"
+                                                    alt="Gea Magnesio 400 Mg 60 Cápsulas">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Labgea</p>
+                                                    <p class="productCategoriesXl naturalColor">Natural</p>
+                                                    <h1 class="productcardTitle">Gea Magnesio 400 Mg 60 Cápsulas</h1>
+                                                    <p class="productDiscountXl">-30%</p>
+                                                    <p class="productOldpriceXl">$14.290</p>
+                                                    <p class="productNewpriceXl">$9.990</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/neurobionta.jpg"
+                                                    alt="Dolo Neurobionta Diclofenaco 50 mg 20 Comprimidos">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">P&G</p>
+                                                    <p class="productCategoriesXl babyColor">Bebes</p>
+                                                    <h1 class="productcardTitle">Dolo Neurobionta Diclofenaco 50 mg 20
+                                                        Comprimidos
+                                                    </h1>
+                                                    <p class="productDiscountXl">-10%</p>
+                                                    <p class="productOldpriceXl">$21.990</p>
+                                                    <p class="productNewpriceXl">$19.971</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="snapModule natlOfferTitle">
+                <div class="contentWrapper">
+                    <div class="captionsMaster">
+                        <div class="captionDisplay">
+                            <div class="captionsIcon iconNatural"></div>
+                            <p class="captionTitle">Ofertas en <span class="break">Natural</p>
+                            <div class="moreButtom">
+                                <p class="moreButtomtext">Ver más</p>
+                                <div class="iconSeemore"></div>
+                            </div>
+                            <p class="captionLead">Te preparamos una selección de productos naturales, con las
+                                <strong>mejores ofertas y descuentos</strong> para ti.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="snapModule natlOfferContent">
+                <div class="contentWrapper">
+                    <div class="offerNaturalMaster">
+
+                        <div class="sliderProduct slidebgNatural" id="slider-natural" data-item-width-mobile="66"
+                            data-item-width-tablet="40" data-item-width-pc="25" data-show-items-pc="3">
+
+                            <button class="sliderBtn sliderPrev naturalPrev" aria-label="Anterior slide">
+                                <i class="bi bi-chevron-left"></i>
+                            </button>
+                            <button class="sliderBtn sliderNext naturalNext" aria-label="Siguiente slide">
+                                <i class="bi bi-chevron-right"></i>
+                            </button>
+
+                            <div class="sliderTrack">
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider naturalColorbg">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/lirex.jpg"
+                                                    alt="Lirex Tibolona 2,5 mg 30 Comprimidos">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Silesia</p>
+                                                    <p class="productCategoriesXl babyColor">Bebes</p>
+                                                    <div class="spacer"></div>
+                                                    <h1 class="productcardTitle">Lirex Tibolona 2,5 mg 30 Comprimidos
+                                                    </h1>
+                                                    <p class="productDiscountXl">-20%</p>
+                                                    <p class="productOldpriceXl">$31.590</p>
+                                                    <p class="productNewpriceXl">$25.272</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/ricino.jpg"
+                                                    alt="Aceite De Ricino 99,5 Líquido 20 mL Genéricos">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Genéricos</p>
+                                                    <p class="productCategoriesXl naturalColor">Natural</p>
+                                                    <h1 class="productcardTitle">Aceite De Ricino 99,5 Líquido 20 mL
+                                                        Genéricos</h1>
+                                                    <p class="productDiscountXl">-10%</p>
+                                                    <p class="productOldpriceXl">$4.340</p>
+                                                    <p class="productNewpriceXl">$3.906</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/lipoten.jpg"
+                                                    alt="Lipoten Atorvastatina 40 mg 28 Comprimidos Recubiertos">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Exeltis</p>
+                                                    <p class="productCategoriesXl bioequivalenteColor">Bioequivalente
+                                                    </p>
+                                                    <h1 class="productcardTitle">Lipoten Atorvastatina 40 mg 28
+                                                        Comprimidos
+                                                        Recubiertos</h1>
+                                                    <p class="productDiscountXl">-26%</p>
+                                                    <p class="productOldpriceXl">$138.582</p>
+                                                    <p class="productNewpriceXl">$110.866</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/simonds.jpg"
+                                                    alt="Pantalla Solar Hipoalergénico 750 mL">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Simonds</p>
+                                                    <p class="productCategoriesXl bellezaColor">Belleza</p>
+                                                    <h1 class="productcardTitle">Pantalla Solar Hipoalergénico 750 mL
+                                                    </h1>
+                                                    <p class="productDiscountXl">-23%</p>
+                                                    <p class="productOldpriceXl">$19.490</p>
+                                                    <p class="productNewpriceXl">$17.490</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/magesio.jpg"
+                                                    alt="Gea Magnesio 400 Mg 60 Cápsulas">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Labgea</p>
+                                                    <p class="productCategoriesXl naturalColor">Natural</p>
+                                                    <h1 class="productcardTitle">Gea Magnesio 400 Mg 60 Cápsulas</h1>
+                                                    <p class="productDiscountXl">-30%</p>
+                                                    <p class="productOldpriceXl">$14.290</p>
+                                                    <p class="productNewpriceXl">$9.990</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/neurobionta.jpg"
+                                                    alt="Dolo Neurobionta Diclofenaco 50 mg 20 Comprimidos">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">P&G</p>
+                                                    <p class="productCategoriesXl babyColor">Bebes</p>
+                                                    <h1 class="productcardTitle">Dolo Neurobionta Diclofenaco 50 mg 20
+                                                        Comprimidos
+                                                    </h1>
+                                                    <p class="productDiscountXl">-10%</p>
+                                                    <p class="productOldpriceXl">$21.990</p>
+                                                    <p class="productNewpriceXl">$19.971</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="snapModule promoAdOne">
+                <div class="contentWrapper">
+                    <div class="publicityMiddleMaster">
+                        <div class="bannerMidlle">
+                            <div class="bannermiddleCont">
+                                <div class="bannermiddleImage">
+                                    <img class="bannermidImageBg" src="static/images/bannerMiddle_home.jpg" alt="">
+                                </div>
+                                <div class="bannermiddleTextContainer">
+                                    <div class="bannermiddleText">
+                                        <div class="bannermiddleHeader">
+                                            <div class="logoExpress"></div>
+                                            <div class="containertextmiddleheader">
+                                                <p class="bannermiddleTextTitle">Belén Express</p>
+                                                <p class="bannermiddleTextSub">Farmacia Belén Online</p>
+                                            </div>
+                                        </div>
+                                        <p class="bannermiddleTextLead"><strong>Hola! 👋</strong><br> Creamos para ti un
+                                            servicio de
+                                            entrega express
+                                            enfocándonos en la rapidez y seguridad de tu medicamentos.</p>
+                                        <p class="bannermiddleTextLead">Nuestra marcha blanca empieza en...</p>
+                                        <p class="bannermiddleTextLead">🥳 <strong>Independencia!!!</strong></p>
+                                        <button class="bannermiddleButton">
+                                            Conoce el Servicio
+                                            <i class="bi bi-arrow-right-circle"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="snapModule bioOfferTitle">
+                <div class="contentWrapper titleWrapper">
+                    <div class="captionsMaster">
+                        <div class="captionDisplay">
+                            <div class="captionsIcon iconBioequivalence"></div>
+                            <p class="captionTitle">Ofertas en<span class="break"> Bioequivalentes</p>
+                            <div class="moreButtom">
+                                <p class="moreButtomtext">Ver más</p>
+                                <div class="iconSeemore"></div>
+                            </div>
+                            <p class="captionLead">Te preparamos una selección de productos en bioquequivalentes,
+                                <strong>mismo remedio</strong> al mejor precio.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="snapModule bioOfferContent">
+                <div class="contentWrapper">
+                    <div class="offerBioMaster">
+                        <div class="sliderProduct slidebgEquivalente" id="slider-generico" data-item-width-mobile="66"
+                            data-item-width-tablet="40" data-item-width-pc="25" data-show-items-pc="3">
+
+                            <button class="sliderBtn sliderPrev equivalentePrev" aria-label="Anterior slide">
+                                <i class="bi bi-chevron-left"></i>
+                            </button>
+                            <button class="sliderBtn sliderNext equivalenteNext" aria-label="Siguiente slide">
+                                <i class="bi bi-chevron-right"></i>
+                            </button>
+
+                            <div class="sliderTrack">
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider bioequivalenteColorbg">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/lirex.jpg"
+                                                    alt="Lirex Tibolona 2,5 mg 30 Comprimidos">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Silesia</p>
+                                                    <p class="productCategoriesXl babyColor">Bebes</p>
+                                                    <div class="spacer"></div>
+                                                    <h1 class="productcardTitle">Lirex Tibolona 2,5 mg 30 Comprimidos
+                                                    </h1>
+                                                    <p class="productDiscountXl">-20%</p>
+                                                    <p class="productOldpriceXl">$31.590</p>
+                                                    <p class="productNewpriceXl">$25.272</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/ricino.jpg"
+                                                    alt="Aceite De Ricino 99,5 Líquido 20 mL Genéricos">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Genéricos</p>
+                                                    <p class="productCategoriesXl naturalColor">Natural</p>
+                                                    <h1 class="productcardTitle">Aceite De Ricino 99,5 Líquido 20 mL
+                                                        Genéricos</h1>
+                                                    <p class="productDiscountXl">-10%</p>
+                                                    <p class="productOldpriceXl">$4.340</p>
+                                                    <p class="productNewpriceXl">$3.906</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/lipoten.jpg"
+                                                    alt="Lipoten Atorvastatina 40 mg 28 Comprimidos Recubiertos">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Exeltis</p>
+                                                    <p class="productCategoriesXl bioequivalenteColor">Bioequivalente
+                                                    </p>
+                                                    <h1 class="productcardTitle">Lipoten Atorvastatina 40 mg 28
+                                                        Comprimidos
+                                                        Recubiertos</h1>
+                                                    <p class="productDiscountXl">-26%</p>
+                                                    <p class="productOldpriceXl">$138.582</p>
+                                                    <p class="productNewpriceXl">$110.866</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/simonds.jpg"
+                                                    alt="Pantalla Solar Hipoalergénico 750 mL">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Simonds</p>
+                                                    <p class="productCategoriesXl bellezaColor">Belleza</p>
+                                                    <h1 class="productcardTitle">Pantalla Solar Hipoalergénico 750 mL
+                                                    </h1>
+                                                    <p class="productDiscountXl">-23%</p>
+                                                    <p class="productOldpriceXl">$19.490</p>
+                                                    <p class="productNewpriceXl">$17.490</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/magesio.jpg"
+                                                    alt="Gea Magnesio 400 Mg 60 Cápsulas">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Labgea</p>
+                                                    <p class="productCategoriesXl naturalColor">Natural</p>
+                                                    <h1 class="productcardTitle">Gea Magnesio 400 Mg 60 Cápsulas</h1>
+                                                    <p class="productDiscountXl">-30%</p>
+                                                    <p class="productOldpriceXl">$14.290</p>
+                                                    <p class="productNewpriceXl">$9.990</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/neurobionta.jpg"
+                                                    alt="Dolo Neurobionta Diclofenaco 50 mg 20 Comprimidos">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">P&G</p>
+                                                    <p class="productCategoriesXl babyColor">Bebes</p>
+                                                    <h1 class="productcardTitle">Dolo Neurobionta Diclofenaco 50 mg 20
+                                                        Comprimidos
+                                                    </h1>
+                                                    <p class="productDiscountXl">-10%</p>
+                                                    <p class="productOldpriceXl">$21.990</p>
+                                                    <p class="productNewpriceXl">$19.971</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="snapModule beautyOfferTitle">
+                <div class="contentWrapper titleWrapper">
+                    <div class="captionsMaster">
+                        <div class="captionDisplay">
+                            <div class="captionsIcon iconBeauty"></div>
+                            <p class="captionTitle">Ofertas en<span class="break"> Belleza</p>
+                            <div class="moreButtom">
+                                <p class="moreButtomtext">Ver más</p>
+                                <div class="iconSeemore"></div>
+                            </div>
+                            <p class="captionLead">Te preparamos una selección de productos en para el cuidado
+                                <strong>de ti</strong> al mejor precio.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="snapModule beautyOfferContent">
+                <div class="contentWrapper">
+                    <div class="offerBeautyMaster">
+                        <div class="sliderProduct slidebgBeauty" id="slider-beauty" data-item-width-mobile="66"
+                            data-item-width-tablet="40" data-item-width-pc="25" data-show-items-pc="3">
+
+                            <button class="sliderBtn sliderPrev bellezaPrev" aria-label="Anterior slide">
+                                <i class="bi bi-chevron-left"></i>
+                            </button>
+                            <button class="sliderBtn sliderNext bellezaNext" aria-label="Siguiente slide">
+                                <i class="bi bi-chevron-right"></i>
+                            </button>
+
+                            <div class="sliderTrack">
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider bellezaColorbg">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/lirex.jpg"
+                                                    alt="Lirex Tibolona 2,5 mg 30 Comprimidos">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Silesia</p>
+                                                    <p class="productCategoriesXl babyColor">Bebes</p>
+                                                    <div class="spacer"></div>
+                                                    <h1 class="productcardTitle">Lirex Tibolona 2,5 mg 30 Comprimidos
+                                                    </h1>
+                                                    <p class="productDiscountXl">-20%</p>
+                                                    <p class="productOldpriceXl">$31.590</p>
+                                                    <p class="productNewpriceXl">$25.272</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/ricino.jpg"
+                                                    alt="Aceite De Ricino 99,5 Líquido 20 mL Genéricos">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Genéricos</p>
+                                                    <p class="productCategoriesXl naturalColor">Natural</p>
+                                                    <h1 class="productcardTitle">Aceite De Ricino 99,5 Líquido 20 mL
+                                                        Genéricos</h1>
+                                                    <p class="productDiscountXl">-10%</p>
+                                                    <p class="productOldpriceXl">$4.340</p>
+                                                    <p class="productNewpriceXl">$3.906</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/lipoten.jpg"
+                                                    alt="Lipoten Atorvastatina 40 mg 28 Comprimidos Recubiertos">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Exeltis</p>
+                                                    <p class="productCategoriesXl bioequivalenteColor">Bioequivalente
+                                                    </p>
+                                                    <h1 class="productcardTitle">Lipoten Atorvastatina 40 mg 28
+                                                        Comprimidos
+                                                        Recubiertos</h1>
+                                                    <p class="productDiscountXl">-26%</p>
+                                                    <p class="productOldpriceXl">$138.582</p>
+                                                    <p class="productNewpriceXl">$110.866</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/simonds.jpg"
+                                                    alt="Pantalla Solar Hipoalergénico 750 mL">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Simonds</p>
+                                                    <p class="productCategoriesXl bellezaColor">Belleza</p>
+                                                    <h1 class="productcardTitle">Pantalla Solar Hipoalergénico 750 mL
+                                                    </h1>
+                                                    <p class="productDiscountXl">-23%</p>
+                                                    <p class="productOldpriceXl">$19.490</p>
+                                                    <p class="productNewpriceXl">$17.490</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/magesio.jpg"
+                                                    alt="Gea Magnesio 400 Mg 60 Cápsulas">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Labgea</p>
+                                                    <p class="productCategoriesXl naturalColor">Natural</p>
+                                                    <h1 class="productcardTitle">Gea Magnesio 400 Mg 60 Cápsulas</h1>
+                                                    <p class="productDiscountXl">-30%</p>
+                                                    <p class="productOldpriceXl">$14.290</p>
+                                                    <p class="productNewpriceXl">$9.990</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/neurobionta.jpg"
+                                                    alt="Dolo Neurobionta Diclofenaco 50 mg 20 Comprimidos">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">P&G</p>
+                                                    <p class="productCategoriesXl babyColor">Bebes</p>
+                                                    <h1 class="productcardTitle">Dolo Neurobionta Diclofenaco 50 mg 20
+                                                        Comprimidos
+                                                    </h1>
+                                                    <p class="productDiscountXl">-10%</p>
+                                                    <p class="productOldpriceXl">$21.990</p>
+                                                    <p class="productNewpriceXl">$19.971</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="snapModule promoAdTwo">
+                <div class="contentWrapper">
+                    <div class="publicityBottomMaster">
+                        <div class="contnoProduct">
+                            <div class="bannerNoproduct">
+                                <div class="textContNoProduct">
+                                    <p class="noproductTitle">Buscas un remedio y<br> ... no está!!</p>
+                                    <p class="noproductLead">No te preocupes si no aparecio, un llamado telefónico y
+                                        nosotros te
+                                        lo conseguimos con el mismo cariño y rapidez de siempre.</p>
+                                </div>
+                                <div class="imageContNoProduct">
+                                    <img src="static/images/Banner_sinProducto.png"
+                                        alt="No se encontraron tu productos">
+                                </div>
+                                <div class="benefitsContNoProduct">
+                                    <p class="noproductBenefits"> Te lo traemos &#x2713;</p>
+                                    <p class="noproductBenefits"> Al mejor precio &#x2713;</p>
+                                    <p class="noproductBenefits"> Cuidamos de ti &#x2713;</p>
+                                </div>
+                            </div>
+                            <div class="infoNoproduct">
+                                <div class="contbuttonCall">
+                                    <div class="button-7"><i class="bi bi-telephone-fill"></i></div>
+                                    <p class="noproductTel"> <a href="tel:+56951051609">Conversa con nosotros</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="snapModule mainFooter">
+                <div class="dataMinsal">
+                    <a href="tel:+566003607777">
+                        <p class="telefonoMinsal">
+                            <i class="bi bi-telephone-fill"></i>
+                            &nbsp; Minsal 600 360 7777
+                        </p>
+                    </a>
+                </div>
+
+                <div class="footerMaster">
+                    <div class="modFooter">
+
+                        <div class="infoFooter">
+                            <div class="footerLogo">
+                                <div class="footerIconlogo"></div>
+                            </div>
+                            <div class="footerLegal colOne">
+                                <p class="linkInfolegal">Despacho</p>
+                                <p class="linkInfolegal">Politicas de Privacidad</p>
+                                <p class="linkInfolegal">Termino y Condiciones</p>
+                            </div>
+                            <div class="footerLegal colTwo">
+                                <p class="linkInfolegal">Despacho</p>
+                                <p class="linkInfolegal">Politicas de Privacidad</p>
+                                <p class="linkInfolegal">Termino y Condiciones</p>
+                            </div>
+                        </div>
+                        <p class="footerLegaltext">Autorización expendido de Medicamentos ISP Res. Ex. 1796 del
+                            27.04.2026</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="js/sliderProduct.js"></script>
+    <script src="motor.js"></script>
+    <script src="js/toastSystem.js"></script>
+</body>
+
+</html>
