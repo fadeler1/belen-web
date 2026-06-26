@@ -197,29 +197,230 @@
         </div>
     </div>
 
+    <div class="loginModule">
+        <div class="loginContainer">
+            <div class="loginHeader">
+                <p class="loginTitle"><strong>Ingresa o Activa</strong> <span class="break">tu cuenta Belén</span></p>
+                <button class="loginCloseBtn" aria-label="Cerrar">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+                <p class="loginSubtitle">Complete sus datos aquí y comience a ahorrar en sus remedios.</p>
+            </div>
+
+            <div class="loginSheet">
+                <div class="loginTabs">
+                    <button class="loginTab active" data-tab="login">Ingresar</button>
+                    <button class="loginTab" data-tab="register">Registrarme</button>
+                </div>
+
+                <div class="loginSliderContainer">
+                    <div class="loginSliderTrack">
+
+                        <div class="loginSlide" id="slide-login">
+                            <div class="loginFormContent">
+                                <form id="loginForm" class="loginForm" onsubmit="event.preventDefault();">
+                                    <div class="loginInputGroup">
+                                        <i class="bi bi-envelope loginInputIcon"></i>
+                                        <div class="loginInputWrapper">
+                                            <label for="loginEmail" class="loginInputLabel">Correo Electrónico</label>
+                                            <input type="email" id="loginEmail" class="loginInputField"
+                                                placeholder="ejemplo@correo.com" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="loginInputGroup">
+                                        <i class="bi bi-lock loginInputIcon"></i>
+                                        <div class="loginInputWrapper">
+                                            <label for="loginPassword" class="loginInputLabel">Contraseña</label>
+                                            <input type="password" id="loginPassword" class="loginInputField"
+                                                placeholder="••••••••" required>
+                                        </div>
+                                        <button type="button" class="loginPasswordToggle"
+                                            aria-label="Mostrar contraseña">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="loginActionsRow">
+                                        <label class="loginRememberMe">
+                                            <input type="checkbox" id="loginRemember">
+                                            <span class="checkboxText">Recordarme</span>
+                                        </label>
+                                        <a href="#" class="loginForgotLink">¿Olvidaste tu contraseña?</a>
+                                    </div>
+
+                                    <button type="submit" class="loginSubmitBtn">Ingresar</button>
+                                </form>
+
+                                <div class="loginDivider">
+                                    <span>O ingresar con</span>
+                                </div>
+
+                                <div class="loginSocialButtons">
+                                    <button class="loginSocialBtn google">
+                                        <i class="bi bi-google"></i>
+                                        <span>Google</span>
+                                    </button>
+                                    <button class="loginSocialBtn facebook">
+                                        <i class="bi bi-facebook"></i>
+                                        <span>Facebook</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="loginSlide" id="slide-register">
+                            <div class="loginFormContent loginFormScrollable">
+                                <form id="registerForm" class="loginForm" onsubmit="event.preventDefault();">
+
+                                    <div class="loginInputGroup">
+                                        <i class="bi bi-person loginInputIcon"></i>
+                                        <div class="loginInputWrapper">
+                                            <label for="registerName" class="loginInputLabel">Nombre Completo</label>
+                                            <input type="text" id="registerName" class="loginInputField"
+                                                placeholder="Ej: María Teresa" required>
+                                        </div>
+                                    </div>
+                                    <p class="seniorHelpText"><i class="bi bi-info-circle-fill"></i> Para saludarte por
+                                        tu nombre y saber con quién conversamos.</p>
+
+                                    <div class="loginInputGroup">
+                                        <i class="bi bi-card-text loginInputIcon"></i>
+                                        <div class="loginInputWrapper">
+                                            <label for="registerRut" class="loginInputLabel">RUT</label>
+                                            <input type="text" id="registerRut" class="loginInputField"
+                                                placeholder="Ej: 12.345.678-9" required>
+                                        </div>
+                                    </div>
+                                    <p class="seniorHelpText"><i class="bi bi-info-circle-fill"></i> Para asociar tus
+                                        recetas médicas y tus descuentos de Fonasa o Isapre.</p>
+
+                                    <div class="loginInputGroup">
+                                        <i class="bi bi-telephone loginInputIcon"></i>
+                                        <div class="loginInputWrapper">
+                                            <label for="registerPhone" class="loginInputLabel">Número de Celular</label>
+                                            <input type="tel" id="registerPhone" class="loginInputField"
+                                                placeholder="Ej: +56 9 1234 5678" required>
+                                        </div>
+                                    </div>
+                                    <p class="seniorHelpText"><i class="bi bi-info-circle-fill"></i> Para avisarte
+                                        cuando tu pedido vaya en camino a tu casa.</p>
+
+                                    <div class="loginInputGroup">
+                                        <i class="bi bi-envelope loginInputIcon"></i>
+                                        <div class="loginInputWrapper">
+                                            <label for="registerEmail" class="loginInputLabel">Correo
+                                                Electrónico</label>
+                                            <input type="email" id="registerEmail" class="loginInputField"
+                                                placeholder="ejemplo@correo.com" required>
+                                        </div>
+                                    </div>
+                                    <p class="seniorHelpText"><i class="bi bi-info-circle-fill"></i> Para enviarte tu
+                                        boleta digital y el comprobante de compra.</p>
+
+                                    <button type="submit" class="loginSubmitBtn" style="margin-top: 1rem;">Registrarme y
+                                        Activar Cuenta</button>
+                                </form>
+
+                                <div class="loginDivider">
+                                    <span>O registrarme con</span>
+                                </div>
+
+                                <div class="loginSocialButtons">
+                                    <button class="loginSocialBtn google">
+                                        <i class="bi bi-google"></i>
+                                        <span>Google</span>
+                                    </button>
+                                    <button class="loginSocialBtn facebook">
+                                        <i class="bi bi-facebook"></i>
+                                        <span>Facebook</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="loginSlide" id="slide-success">
+                            <div class="successSlideContent">
+                                <div class="successIconContainer">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <h3 class="successTitle" id="successMainTitle">¡Acceso Exitoso!</h3>
+                                <div class="successGreetingBox">
+                                    <p class="successHello">Buen día,</p>
+                                    <p class="successUserName" id="successDisplayName">María Teresa</p>
+                                </div>
+                                <p class="successSubtitle">Tu cuenta de Farmacia Belén ya está lista y configurada para
+                                    que disfrutes de tus beneficios y convenios de Fonasa o Isapre.</p>
+                                <button type="button" class="loginSubmitBtn successCloseBtn"
+                                    id="btn-success-start">Comenzar a Comprar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <main id="physicsRoot" class="physicsRoot">
         <div id="physicsTrack" class="physicsTrack">
 
-            <div class="snapModule heroSlider">
-                <div class="contentWrapper sliderWrapper">
-                    <div class="modHero">
+            <div class="snapModule categoryheader">
+                <div class="contentWrapper catpadTop">
 
-                        <div class="modHeroCard modHeroCard--active colorSlideOne">
+                    <div class="categoryHeaderContainer">
+                        <div class="categoryContainer">
 
-
-                            <div class="heroInfo cardOne">
-                                <p class="heroDate">Hasta el 15 de Julio</p>
-                                <h2 class="heroTitle">Mes del cuidado<span class="break"></span> de la piel</span></h2>
-                                <h3 class="heroLead">Descuentos en todas las cremas y bloqueadores.</h3>
-                                <div class="buttomHero">
-                                    <p class="heroButtomtext">Ver Productos</p>
+                            <div class="categoryDetailContainerContent">
+                                <p class="detailCategoryTitle"><i class="bi bi-plus-circle"></i> Categoría</p>
+                                <p class="detailCategoryName">Bebés</p>
+                                <div class="imagecategorybg">
+                                    <img src="static/images/categoriaIcon_image_baby.png" alt="">
                                 </div>
                             </div>
 
-                            <div class="bginfoHero bgOne"></div>
+                            <div class="categoryDetailContainerOffers">
+                                <p class="detailCategoryTitle"><i class="bi bi-plus-circle"></i> Ofertas</p>
+                                <p class="detailCategoryNum">1187</p>
+                            </div>
 
-                            <div class="heroImage">
-                                <img src="static/images/hero_slide_01.png" alt="Cremas y bloqueadores con descuentos"
+                            <div class="categoryDetailContainerNews">
+                                <p class="detailCategoryTitle"><i class="bi bi-plus-circle"></i> Nuevos</p>
+                                <p class="detailCategoryNum">86</p>
+                            </div>
+
+                            <div class="categoryDetailContainerProducts">
+                                <p class="detailCategoryTitle"> <i class="bi bi-plus-circle"></i> Productos</p>
+                                <p class="detailCategoryNum">8324</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="snapModule categorySlider">
+                <div class="contentWrapper">
+                    <div class="modHero sliderCategoryproduct">
+
+                        <div class="modHeroCard modHeroCard--active colorSlideCategory">
+
+
+                            <div class="categoryheroInfo cardOne">
+                                <p class="categoryDate">Hasta el 15 de Agosto</p>
+                                <p class="categoryLead">Fórmula Infantil Sin Lactosa 400 gr.</p>
+                                <h2 class="categoryTitle">$19.990</span></h2>
+                                <div class="contbuttomSlideCategory">
+                                    <div class="buttomSlideCategory">
+                                        <p class="heroButtomtext">Ver Producto</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bginfoHero bgCategory catLayer"></div>
+
+                            <div class="categoryHeroImage">
+                                <img src="static/promoProducts/nan.png" alt="Fórmula Infantil Sin Lactosa 400 gr"
                                     class="heroImageMove">
                             </div>
 
@@ -227,21 +428,71 @@
 
                         </div>
 
-                        <div class="modHeroCard modHeroCard--next colorSlideTwo">
+                        <div class="modHeroCard modHeroCard--next colorSlideCategory">
 
-                            <div class="heroInfo">
-                                <p class="heroDate">Hasta el 30 de Agosto</p>
-                                <h2 class="heroTitle">Bienvenidos a<span class="break"></span> nuestro sitio</span></h2>
-                                <h3 class="heroLead">Te regalamos un descuento en tu primera compra.</h3>
-                                <div class="buttomHero">
-                                    <p class="heroButtomtext">Ver Detalles</p>
+                            <div class="categoryheroInfo">
+                                <p class="categoryDate">Hasta el 30 de Agosto</p>
+                                <p class="categoryLead">Pañal Premium Care Tamaño XXXG (+19 kg) 112 Un</p>
+                                <h2 class="categoryTitle">$35.990</h2>
+                                <div class="contbuttomSlideCategory">
+                                    <div class="buttomSlideCategory">
+                                        <p class="heroButtomtext">Ver Producto</p>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="bginfoHero bgTwo"></div>
+                            <div class="bginfoHero bgCategory catLayer"></div>
 
-                            <div class="heroImage">
-                                <img src="static/images/hero_slide_02.png" alt="Descuento primera compra"
+                            <div class="categoryHeroImage">
+                                <img src="static/promoProducts/pampers.png"
+                                    alt="Pañal Premium Care Tamaño XXXG (+19 kg) 112 Un" class="heroImageMove">
+                            </div>
+
+                            <div class="heroGradientProtector"></div>
+
+                        </div>
+
+                        <div class="modHeroCard colorSlideCategory">
+
+                            <div class="categoryheroInfo cardFour">
+                                <p class="categoryDate">Hasta el 30 de Agosto</p>
+                                <p class="categoryLead">Mamadera Anticólicos 260ml Traslucida SCY103/01</p>
+                                <h2 class="categoryTitle">$ 6.990</h2>
+                                <div class="contbuttomSlideCategory">
+                                    <div class="buttomSlideCategory">
+                                        <p class="heroButtomtext">Ver Producto</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bginfoHero bgCategory catLayer"></div>
+
+                            <div class="categoryHeroImage">
+                                <img src="static/promoProducts/avent.png"
+                                    alt="Mamadera Anticólicos 260ml Traslucida SCY103/01" class="heroImageMove">
+                            </div>
+
+                            <div class="heroGradientProtector"></div>
+
+                        </div>
+
+                        <div class="modHeroCard colorSlideCategory">
+
+                            <div class="categoryheroInfo cardThree">
+                                <p class="categoryDate">Hasta el 30 de Agosto</p>
+                                <p class="categoryLead">Jabon Liquido 400 ml Rich Moisture</p>
+                                <h2 class="categoryTitle">$ 4.990</h2>
+                                <div class="contbuttomSlideCategory">
+                                    <div class="buttomSlideCategory">
+                                        <p class="heroButtomtext">Ver Producto</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bginfoHero bgCategory catLayer"></div>
+
+                            <div class="categoryHeroImage">
+                                <img src="static/promoProducts/babydove.png" alt="Jabon Liquido 400 ml Rich Moisture"
                                     class="heroImageMove">
                             </div>
 
@@ -249,62 +500,18 @@
 
                         </div>
 
-                        <div class="modHeroCard colorSlideFour">
-
-                            <div class="heroInfo cardFour">
-                                <p class="heroDate">Letus Labooratorio</p>
-                                <h2 class="heroTitle">Citrato de Magnesio<span class="break"></span> $12.990</span></h2>
-                                <h3 class="heroLead">Revitaliza tu cuerpo con Magnesio 400 mg.</h3>
-                                <div class="buttomHero">
-                                    <p class="heroButtomtext">Conoce más</p>
-                                </div>
+                        <div class="heroPreviews herocategory">
+                            <div class="heroPreview heroPreview--active previewColorCategory">
+                                <img src="static/promoProducts/nan.png" alt="Preview 1">
                             </div>
-
-                            <div class="bginfoHero bgFour"></div>
-
-                            <div class="heroImage">
-                                <img src="static/images/hero_slide_04.png" alt="Descuento primera compra"
-                                    class="heroImageMove">
+                            <div class="heroPreview previewColorCategory herocategory">
+                                <img src="static/promoProducts/pampers.png" alt="Preview 2">
                             </div>
-
-                            <div class="heroGradientProtector"></div>
-
-                        </div>
-
-                        <div class="modHeroCard colorSlideThree">
-
-                            <div class="heroInfo cardThree">
-                                <p class="heroDate">Belen Express y Preferente</p>
-                                <h2 class="heroTitle">Recibe como<span class="break"></span> tú prefieras</span></h2>
-                                <h3 class="heroLead">Belén Express y Preferente, local o despacho.</h3>
-                                <div class="buttomHero">
-                                    <p class="heroButtomtext">Conoce más</p>
-                                </div>
+                            <div class="heroPreview previewColorCategory herocategory">
+                                <img src="static/promoProducts/avent.png" alt="Preview 4">
                             </div>
-
-                            <div class="bginfoHero bgThree"></div>
-
-                            <div class="heroImage">
-                                <img src="static/images/hero_slide_03.png" alt="Descuento primera compra"
-                                    class="heroImageMove">
-                            </div>
-
-                            <div class="heroGradientProtector"></div>
-
-                        </div>
-
-                        <div class="heroPreviews">
-                            <div class="heroPreview heroPreview--active previewColorOne">
-                                <img src="static/images/hero_slide_01.png" alt="Preview 1">
-                            </div>
-                            <div class="heroPreview previewColorTwo">
-                                <img src="static/images/hero_slide_02.png" alt="Preview 2">
-                            </div>
-                            <div class="heroPreview previewColorFour">
-                                <img src="static/images/hero_slide_04.png" alt="Preview 4">
-                            </div>
-                            <div class="heroPreview previewColorThree">
-                                <img src="static/images/hero_slide_03.png" alt="Preview 3">
+                            <div class="heroPreview previewColorCategory herocategory">
+                                <img src="static/promoProducts/babydove.png" alt="Preview 3">
                             </div>
                         </div>
 
@@ -316,21 +523,250 @@
                 </div>
             </div>
 
-            <div class="snapModule catTitle">
+            <div class="snapModule babyfferTitle">
                 <div class="contentWrapper titleWrapper">
                     <div class="captionsMaster">
-                        <div class="captionDisplay">
-                            <div class="captionsIcon iconSearch"></div>
-                            <p class="captionTitle">Resultados para<span class="break"> Risperidona</p>
-                            <p class="captionLead">Estos son todos tus resultados, <strong>¿No está...?</strong> Vuelve
-                                a buscar en la barra de Busqueda.
+                        <div class="captionDisplaySmall">
+                            <i class="bi bi-star-fill topSeallerIcon"></i>
+                            <p class="captionTitleSmall">Favoritos de<span class="break"> Mamás y Papás</p>
+                            <div class="moreButtomSmall">
+                                <div class="moreButtomTextcont">
+                                    <p class="moreButtomtextSmall">ver todos</p>
+                                </div>
+                                <div class="iconSeemoreSmall"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="snapModule babyfferContent">
+                <div class="contentWrapper">
+                    <div class="offerBabyMaster">
 
-                            </p>
+                        <div class="sliderProduct slidebgTransparent" id="slider-bebes" data-item-width-mobile="66"
+                            data-item-width-tablet="50" data-item-width-pc="25" data-show-items-pc="3">
+
+                            <button class="sliderBtn sliderPrev babiePrev" aria-label="Anterior slide">
+                                <i class="bi bi-chevron-left"></i>
+                            </button>
+                            <button class="sliderBtn sliderNext babieNext" aria-label="Siguiente slide">
+                                <i class="bi bi-chevron-right"></i>
+                            </button>
+
+                            <div class="sliderTrack">
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="toprankIcon">
+                                            <p class="textnumberRank">#1</p>
+                                        </div>
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/lirex.jpg"
+                                                    alt="Lirex Tibolona 2,5 mg 30 Comprimidos">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Silesia</p>
+                                                    <p class="productCategoriesXl babyColor">Bebes</p>
+                                                    <div class="spacer"></div>
+                                                    <h1 class="productcardTitle">Lirex Tibolona 2,5 mg 30
+                                                        Comprimidos
+                                                    </h1>
+                                                    <p class="productDiscountXl">-20%</p>
+                                                    <p class="productOldpriceXl">$31.590</p>
+                                                    <p class="productNewpriceXl">$25.272</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="toprankIcon">
+                                            <p class="textnumberRank">#2</p>
+                                        </div>
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/ricino.jpg"
+                                                    alt="Aceite De Ricino 99,5 Líquido 20 mL Genéricos">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Genéricos</p>
+                                                    <p class="productCategoriesXl naturalColor">Natural</p>
+                                                    <h1 class="productcardTitle">Aceite De Ricino 99,5 Líquido 20 mL
+                                                        Genéricos</h1>
+                                                    <p class="productDiscountXl">-10%</p>
+                                                    <p class="productOldpriceXl">$4.340</p>
+                                                    <p class="productNewpriceXl">$3.906</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="toprankIcon">
+                                            <p class="textnumberRank">#3</p>
+                                        </div>
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/lipoten.jpg"
+                                                    alt="Lipoten Atorvastatina 40 mg 28 Comprimidos Recubiertos">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Exeltis</p>
+                                                    <p class="productCategoriesXl bioequivalenteColor">Bioequivalente
+                                                    </p>
+                                                    <h1 class="productcardTitle">Lipoten Atorvastatina 40 mg 28
+                                                        Comprimidos
+                                                        Recubiertos</h1>
+                                                    <p class="productDiscountXl">-26%</p>
+                                                    <p class="productOldpriceXl">$138.582</p>
+                                                    <p class="productNewpriceXl">$110.866</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="toprankIcon">
+                                            <p class="textnumberRank">#4</p>
+                                        </div>
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/simonds.jpg"
+                                                    alt="Pantalla Solar Hipoalergénico 750 mL">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Simonds</p>
+                                                    <p class="productCategoriesXl bellezaColor">Belleza</p>
+                                                    <h1 class="productcardTitle">Pantalla Solar Hipoalergénico 750 mL
+                                                    </h1>
+                                                    <p class="productDiscountXl">-23%</p>
+                                                    <p class="productOldpriceXl">$19.490</p>
+                                                    <p class="productNewpriceXl">$17.490</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="toprankIcon">
+                                            <p class="textnumberRank">#5</p>
+                                        </div>
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/magesio.jpg"
+                                                    alt="Gea Magnesio 400 Mg 60 Cápsulas">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">Labgea</p>
+                                                    <p class="productCategoriesXl naturalColor">Natural</p>
+                                                    <h1 class="productcardTitle">Gea Magnesio 400 Mg 60 Cápsulas</h1>
+                                                    <p class="productDiscountXl">-30%</p>
+                                                    <p class="productOldpriceXl">$14.290</p>
+                                                    <p class="productNewpriceXl">$9.990</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sliderItem">
+                                    <div class="cardproductMaster heightSlider">
+                                        <div class="toprankIcon">
+                                            <p class="textnumberRank">#6</p>
+                                        </div>
+                                        <div class="productButtom">
+                                            <div class="productbuttomIcon"></div>
+                                        </div>
+                                        <div class="cardproductinfoMaster">
+
+                                            <div class="productcardImage">
+                                                <div class="productFilter"></div>
+                                                <img class="imgcardMaster" src="static/catalog/neurobionta.jpg"
+                                                    alt="Dolo Neurobionta Diclofenaco 50 mg 20 Comprimidos">
+                                            </div>
+
+                                            <div class="cardproductInfo">
+                                                <div class="cardproductInfogrid">
+                                                    <p class="productLaboratoryXl">P&G</p>
+                                                    <p class="productCategoriesXl babyColor">Bebes</p>
+                                                    <h1 class="productcardTitle">Dolo Neurobionta Diclofenaco 50 mg 20
+                                                        Comprimidos
+                                                    </h1>
+                                                    <p class="productDiscountXl">-10%</p>
+                                                    <p class="productOldpriceXl">$21.990</p>
+                                                    <p class="productNewpriceXl">$19.971</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div class="snapModule babyfferTitle">
+                <div class="contentWrapper titleWrapper">
+                    <div class="captionsMaster">
+                        <div class="captionDisplaySmall">
+                            <i class="bi bi-suit-heart-fill topSeallerIcon"></i>
+                            <p class="captionTitleSmall">Todos los <span class="break"> imprescindibles</p>
+                            <div class="moreButtomSmall">
+                                <div class="moreButtomTextcont">
+                                    <p class="moreButtomtextSmall">ver todos</p>
+                                </div>
+                                <div class="iconSeemoreSmall"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="snapModule searchFilter">
                 <div class="contentWrapper filterWrapper">
                     <p class="filterTitle">Ordena tus productos por:</p>

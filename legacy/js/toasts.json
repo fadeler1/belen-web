@@ -1,0 +1,71 @@
+[
+  {
+    "id": "bienvenida",
+    "active": true,
+    "once": false,
+    "tag": "Hola, Bienvenido!",
+    "text": "Estamos aquí para guiarte en tu compra, no te preocupes.",
+    "duration": 5000,
+    "type": "info",
+    "condition": {
+      "type": "onModuleActive",
+      "moduleClass": "heroSlider",
+      "viewTime": 2000
+    }
+  },
+  {
+    "id": "recetas_consejo",
+    "active": false,
+    "once": false,
+    "tag": "Consejo: Recetas Médicas",
+    "text": "Puedes subir tu receta médica fácilmente haciendo clic en el botón 'Recetas' en el menú de arriba.",
+    "duration": 11000,
+    "type": "recipe",
+    "condition": {
+      "type": "onModuleActive",
+      "moduleClass": "catContent",
+      "viewTime": 2500
+    }
+  },
+  {
+    "id": "oferta_natural",
+    "active": false,
+    "once": false,
+    "tag": "Oferta de Salud Natural",
+    "text": "¡Cuida tu bienestar! aprovecha hoy un 20% de descuento en Suplementos Naturales.",
+    "duration": 12000,
+    "type": "natural",
+    "condition": {
+      "type": "onModuleActive",
+      "moduleClass": "natOfferContent",
+      "viewTime": 2500
+    }
+  },
+  {
+    "id": "oferta_belleza",
+    "active": true,
+    "once": false,
+    "tag": "Cuidado Especial de la Piel",
+    "text": "Protege y nutre tu piel con nuestras cremas y protectores solares con descuentos exclusivos.",
+    "duration": 2000,
+    "type": "beauty",
+    "condition": {
+      "type": "onModuleActive",
+      "moduleClass": "beautyOfferContent",
+      "viewTime": 2500
+    }
+  },
+  {
+    "id": "carrito_aviso",
+    "active": false,
+    "once": true,
+    "tag": "¡No olvides tus productos!",
+    "text": " Tienes productos guardados, toca Compras arriba, para verlas.",
+    "duration": 4500,
+    "type": "cart",
+    "condition": {
+      "type": "cartNotEmpty",
+      "interval": 30000
+    }
+  }
+]

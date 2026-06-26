@@ -197,6 +197,171 @@
         </div>
     </div>
 
+    <div class="loginModule">
+        <div class="loginContainer">
+            <div class="loginHeader">
+                <p class="loginTitle"><strong>Ingresa o Activa</strong> <span class="break">tu cuenta Belén</span></p>
+                <button class="loginCloseBtn" aria-label="Cerrar">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+                <p class="loginSubtitle">Complete sus datos aquí y comience a ahorrar en sus remedios.</p>
+            </div>
+
+            <div class="loginSheet">
+                <div class="loginTabs">
+                    <button class="loginTab active" data-tab="login">Ingresar</button>
+                    <button class="loginTab" data-tab="register">Registrarme</button>
+                </div>
+
+                <div class="loginSliderContainer">
+                    <div class="loginSliderTrack">
+
+                        <div class="loginSlide" id="slide-login">
+                            <div class="loginFormContent">
+                                <form id="loginForm" class="loginForm" onsubmit="event.preventDefault();">
+                                    <div class="loginInputGroup">
+                                        <i class="bi bi-envelope loginInputIcon"></i>
+                                        <div class="loginInputWrapper">
+                                            <label for="loginEmail" class="loginInputLabel">Correo Electrónico</label>
+                                            <input type="email" id="loginEmail" class="loginInputField"
+                                                placeholder="ejemplo@correo.com" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="loginInputGroup">
+                                        <i class="bi bi-lock loginInputIcon"></i>
+                                        <div class="loginInputWrapper">
+                                            <label for="loginPassword" class="loginInputLabel">Contraseña</label>
+                                            <input type="password" id="loginPassword" class="loginInputField"
+                                                placeholder="••••••••" required>
+                                        </div>
+                                        <button type="button" class="loginPasswordToggle"
+                                            aria-label="Mostrar contraseña">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="loginActionsRow">
+                                        <label class="loginRememberMe">
+                                            <input type="checkbox" id="loginRemember">
+                                            <span class="checkboxText">Recordarme</span>
+                                        </label>
+                                        <a href="#" class="loginForgotLink">¿Olvidaste tu contraseña?</a>
+                                    </div>
+
+                                    <button type="submit" class="loginSubmitBtn">Ingresar</button>
+                                </form>
+
+                                <div class="loginDivider">
+                                    <span>O ingresar con</span>
+                                </div>
+
+                                <div class="loginSocialButtons">
+                                    <button class="loginSocialBtn google">
+                                        <i class="bi bi-google"></i>
+                                        <span>Google</span>
+                                    </button>
+                                    <button class="loginSocialBtn facebook">
+                                        <i class="bi bi-facebook"></i>
+                                        <span>Facebook</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="loginSlide" id="slide-register">
+                            <div class="loginFormContent loginFormScrollable">
+                                <form id="registerForm" class="loginForm" onsubmit="event.preventDefault();">
+
+                                    <div class="loginInputGroup">
+                                        <i class="bi bi-person loginInputIcon"></i>
+                                        <div class="loginInputWrapper">
+                                            <label for="registerName" class="loginInputLabel">Nombre Completo</label>
+                                            <input type="text" id="registerName" class="loginInputField"
+                                                placeholder="Ej: María Teresa" required>
+                                        </div>
+                                    </div>
+                                    <p class="seniorHelpText"><i class="bi bi-info-circle-fill"></i> Para saludarte por
+                                        tu nombre y saber con quién conversamos.</p>
+
+                                    <div class="loginInputGroup">
+                                        <i class="bi bi-card-text loginInputIcon"></i>
+                                        <div class="loginInputWrapper">
+                                            <label for="registerRut" class="loginInputLabel">RUT</label>
+                                            <input type="text" id="registerRut" class="loginInputField"
+                                                placeholder="Ej: 12.345.678-9" required>
+                                        </div>
+                                    </div>
+                                    <p class="seniorHelpText"><i class="bi bi-info-circle-fill"></i> Para asociar tus
+                                        recetas médicas y tus descuentos de Fonasa o Isapre.</p>
+
+                                    <div class="loginInputGroup">
+                                        <i class="bi bi-telephone loginInputIcon"></i>
+                                        <div class="loginInputWrapper">
+                                            <label for="registerPhone" class="loginInputLabel">Número de Celular</label>
+                                            <input type="tel" id="registerPhone" class="loginInputField"
+                                                placeholder="Ej: +56 9 1234 5678" required>
+                                        </div>
+                                    </div>
+                                    <p class="seniorHelpText"><i class="bi bi-info-circle-fill"></i> Para avisarte
+                                        cuando tu pedido vaya en camino a tu casa.</p>
+
+                                    <div class="loginInputGroup">
+                                        <i class="bi bi-envelope loginInputIcon"></i>
+                                        <div class="loginInputWrapper">
+                                            <label for="registerEmail" class="loginInputLabel">Correo
+                                                Electrónico</label>
+                                            <input type="email" id="registerEmail" class="loginInputField"
+                                                placeholder="ejemplo@correo.com" required>
+                                        </div>
+                                    </div>
+                                    <p class="seniorHelpText"><i class="bi bi-info-circle-fill"></i> Para enviarte tu
+                                        boleta digital y el comprobante de compra.</p>
+
+                                    <button type="submit" class="loginSubmitBtn" style="margin-top: 1rem;">Registrarme y
+                                        Activar Cuenta</button>
+                                </form>
+
+                                <div class="loginDivider">
+                                    <span>O registrarme con</span>
+                                </div>
+
+                                <div class="loginSocialButtons">
+                                    <button class="loginSocialBtn google">
+                                        <i class="bi bi-google"></i>
+                                        <span>Google</span>
+                                    </button>
+                                    <button class="loginSocialBtn facebook">
+                                        <i class="bi bi-facebook"></i>
+                                        <span>Facebook</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="loginSlide" id="slide-success">
+                            <div class="successSlideContent">
+                                <div class="successIconContainer">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <h3 class="successTitle" id="successMainTitle">¡Acceso Exitoso!</h3>
+                                <div class="successGreetingBox">
+                                    <p class="successHello">Buen día,</p>
+                                    <p class="successUserName" id="successDisplayName">María Teresa</p>
+                                </div>
+                                <p class="successSubtitle">Tu cuenta de Farmacia Belén ya está lista y configurada para
+                                    que disfrutes de tus beneficios y convenios de Fonasa o Isapre.</p>
+                                <button type="button" class="loginSubmitBtn successCloseBtn"
+                                    id="btn-success-start">Comenzar a Comprar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <main id="physicsRoot" class="physicsRoot">
         <div id="physicsTrack" class="physicsTrack">
 

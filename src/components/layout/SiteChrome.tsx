@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LoginModule from "./LoginModule";
 
 interface SiteChromeProps {
   homeHref?: string;
@@ -286,6 +287,8 @@ export default function SiteChrome({
           </div>
         </div>
       </div>
+
+      <LoginModule />
     </>
   );
 }

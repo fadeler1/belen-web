@@ -660,5 +660,183 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // ==========================================================================
+    // CONTROLADOR DEL MODULO DE LOGIN (.loginModule)
+    // ==========================================================================
+    const loginModule = document.querySelector('.loginModule');
+
+    function setLoginSlide(slideIndex) {
+        const track = document.querySelector('.loginSliderTrack');
+        if (track) {
+            const translatePercent = -slideIndex * 33.3333;
+            track.style.transform = `translateX(${translatePercent}%)`;
+        }
+
+        const tabs = document.querySelector('.loginTabs');
+        if (tabs) {
+            if (slideIndex === 2) {
+                // Pantalla de éxito: ocultar pestañas
+                tabs.style.opacity = '0';
+                tabs.style.pointerEvents = 'none';
+                setTimeout(() => {
+                    if (tabs.style.opacity === '0') {
+                        tabs.style.display = 'none';
+                    }
+                }, 300);
+            } else {
+                tabs.style.display = 'flex';
+                setTimeout(() => {
+                    tabs.style.opacity = '1';
+                    tabs.style.pointerEvents = 'auto';
+                }, 10);
+                
+                const tabButtons = tabs.querySelectorAll('.loginTab');
+                tabButtons.forEach((btn, idx) => {
+                    if (idx === slideIndex) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+            }
+        }
+    }
+
+    function openLogin() {
+        if (loginModule) {
+            setLoginSlide(0);
+            loginModule.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeLogin() {
+        if (loginModule) {
+            loginModule.classList.remove('active');
+            document.body.style.overflow = '';
+            setTimeout(() => {
+                setLoginSlide(0);
+                const loginForm = document.getElementById('loginForm');
+                const registerForm = document.getElementById('registerForm');
+                if (loginForm) loginForm.reset();
+                if (registerForm) registerForm.reset();
+            }, 400);
+        }
+    }
+
+    // Manejar el envío del formulario de ingreso
+    document.addEventListener('submit', (e) => {
+        if (e.target.id === 'loginForm') {
+            e.preventDefault();
+            
+            const emailInput = document.getElementById('loginEmail');
+            let displayName = 'María Teresa'; // fallback
+            if (emailInput && emailInput.value) {
+                const parts = emailInput.value.split('@');
+                displayName = parts[0].charAt(0).toUpperCase() + parts[0].slice(1);
+            }
+            
+            const successMainTitle = document.getElementById('successMainTitle');
+            const successDisplayName = document.getElementById('successDisplayName');
+            if (successMainTitle) successMainTitle.textContent = '¡Acceso Exitoso!';
+            if (successDisplayName) successDisplayName.textContent = displayName;
+            
+            const navGreetings = document.querySelectorAll('.greetingName');
+            navGreetings.forEach(greet => {
+                greet.textContent = displayName;
+            });
+            
+            setLoginSlide(2);
+        }
+    });
+
+    // Manejar el envío del formulario de registro
+    document.addEventListener('submit', (e) => {
+        if (e.target.id === 'registerForm') {
+            e.preventDefault();
+            
+            const nameInput = document.getElementById('registerName');
+            let displayName = nameInput && nameInput.value ? nameInput.value.trim() : 'María Teresa';
+            
+            if (displayName) {
+                displayName = displayName.split(' ')[0];
+            }
+            
+            const successMainTitle = document.getElementById('successMainTitle');
+            const successDisplayName = document.getElementById('successDisplayName');
+            if (successMainTitle) successMainTitle.textContent = '¡Registro Exitoso!';
+            if (successDisplayName) successDisplayName.textContent = displayName;
+            
+            const navGreetings = document.querySelectorAll('.greetingName');
+            navGreetings.forEach(greet => {
+                greet.textContent = displayName;
+            });
+            
+            setLoginSlide(2);
+        }
+    });
+
+    // Alternar visibilidad de contraseña
+    document.addEventListener('click', (e) => {
+        const toggleBtn = e.target.closest('.loginPasswordToggle');
+        if (toggleBtn) {
+            const input = toggleBtn.closest('.loginInputGroup').querySelector('.loginInputField');
+            const icon = toggleBtn.querySelector('i');
+            if (input && icon) {
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.classList.remove('bi-eye');
+                    icon.classList.add('bi-eye-slash');
+                } else {
+                    input.type = 'password';
+                    icon.classList.remove('bi-eye-slash');
+                    icon.classList.add('bi-eye');
+                }
+            }
+        }
+    });
+
+    // Manejar clics de pestañas (Ingresar / Registrarse)
+    document.addEventListener('click', (e) => {
+        const tab = e.target.closest('.loginTab');
+        if (tab) {
+            const container = tab.closest('.loginTabs');
+            if (container) {
+                const targetTab = tab.getAttribute('data-tab');
+                if (targetTab === 'login') {
+                    setLoginSlide(0);
+                } else if (targetTab === 'register') {
+                    setLoginSlide(1);
+                }
+            }
+        }
+    });
+
+    // Escuchar eventos para abrir el módulo de login
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('.accessclientBtn')) {
+            e.preventDefault();
+            openLogin();
+        }
+    });
+
+    // Escuchar eventos para cerrar el módulo de login
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('.loginCloseBtn') || e.target.closest('.successCloseBtn')) {
+            closeLogin();
+            return;
+        }
+        if (loginModule && e.target === loginModule) {
+            closeLogin();
+        }
+    });
+
+    // Tecla Escape para cerrar el módulo de login
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && loginModule && loginModule.classList.contains('active')) {
+            closeLogin();
+        }
+    });
+
     requestAnimationFrame(physicsLoop);
 });
