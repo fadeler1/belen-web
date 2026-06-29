@@ -1,5 +1,7 @@
 import Link from "next/link";
+import AccessClientButton from "./AccessClientButton";
 import LoginModule from "./LoginModule";
+import NavUserGreeting from "./NavUserGreeting";
 
 interface SiteChromeProps {
   homeHref?: string;
@@ -25,13 +27,7 @@ export default function SiteChrome({
           <Link href={homeHref} className="navLogo">
             <img src="/static/icons/logoFb.svg" alt="Farmacia Belén" />
           </Link>
-          <div className="navUserGreeting">
-            <span className="greetingTitle">
-              <strong>Buen día,</strong>
-            </span>
-            <span className="break"></span>
-            <span className="greetingName">María Teresa</span>
-          </div>
+          <NavUserGreeting />
           <div className="navSearch">
             <form action="/search" className="searchForm">
               <input
@@ -48,10 +44,7 @@ export default function SiteChrome({
             </form>
           </div>
           <div className="navActions">
-            <button className="accessclientBtn" type="button">
-              <div className="iconAccessClient"></div>
-              <p className="accesClientitle">Cliente</p>
-            </button>
+            <AccessClientButton />
             <button className="cartBottom" type="button">
               <div className="iconbottomCart">
                 <span className="cartBadge">3</span>

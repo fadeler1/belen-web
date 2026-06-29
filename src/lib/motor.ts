@@ -1,4 +1,6 @@
 // @ts-nocheck
+import { getAuthService } from '@/lib/auth';
+import { initLoginController } from '@/lib/auth/controllers/loginController';
 // ==========================================================================
 // CONFIGURACIÓN AVANZADA DEL MOTOR FÍSICO (Spring Physics & Dinámica Senior)
 // ==========================================================================
@@ -19,7 +21,12 @@ const engineConfig = {
 // ==========================================================================
 // MOTOR FÍSICO HÍBRIDO CON SPRING PHYSICS
 // ==========================================================================
+let motorInitialized = false;
+
 export function initMotor() {
+    if (motorInitialized) return;
+    motorInitialized = true;
+
     const root = document.getElementById('physicsRoot');
     const track = document.getElementById('physicsTrack');
 
@@ -664,165 +671,7 @@ export function initMotor() {
     // ==========================================================================
     // CONTROLADOR DEL MODULO DE LOGIN (.loginModule)
     // ==========================================================================
-    const loginModule = document.querySelector('.loginModule');
-
-    function setLoginSlide(slideIndex: number) {
-        const track = document.querySelector('.loginSliderTrack');
-        if (track instanceof HTMLElement) {
-            const translatePercent = -slideIndex * 33.3333;
-            track.style.transform = `translateX(${translatePercent}%)`;
-        }
-
-        const tabs = document.querySelector('.loginTabs');
-        if (tabs instanceof HTMLElement) {
-            if (slideIndex === 2) {
-                tabs.style.opacity = '0';
-                tabs.style.pointerEvents = 'none';
-                setTimeout(() => {
-                    if (tabs.style.opacity === '0') {
-                        tabs.style.display = 'none';
-                    }
-                }, 300);
-            } else {
-                tabs.style.display = 'flex';
-                setTimeout(() => {
-                    tabs.style.opacity = '1';
-                    tabs.style.pointerEvents = 'auto';
-                }, 10);
-
-                const tabButtons = tabs.querySelectorAll('.loginTab');
-                tabButtons.forEach((btn, idx) => {
-                    btn.classList.toggle('active', idx === slideIndex);
-                });
-            }
-        }
-    }
-
-    function openLogin() {
-        if (loginModule) {
-            setLoginSlide(0);
-            loginModule.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-    }
-
-    function closeLogin() {
-        if (loginModule) {
-            loginModule.classList.remove('active');
-            document.body.style.overflow = '';
-            setTimeout(() => {
-                setLoginSlide(0);
-                const loginForm = document.getElementById('loginForm') as HTMLFormElement | null;
-                const registerForm = document.getElementById('registerForm') as HTMLFormElement | null;
-                loginForm?.reset();
-                registerForm?.reset();
-            }, 400);
-        }
-    }
-
-    function showLoginSuccess(displayName: string, title: string) {
-        const successMainTitle = document.getElementById('successMainTitle');
-        const successDisplayName = document.getElementById('successDisplayName');
-        if (successMainTitle) successMainTitle.textContent = title;
-        if (successDisplayName) successDisplayName.textContent = displayName;
-
-        document.querySelectorAll('.greetingName').forEach((greet) => {
-            greet.textContent = displayName;
-        });
-
-        setLoginSlide(2);
-    }
-
-    document.addEventListener('submit', (e) => {
-        const target = e.target;
-        if (!(target instanceof HTMLFormElement)) return;
-
-        if (target.id === 'loginForm') {
-            e.preventDefault();
-
-            const emailInput = document.getElementById('loginEmail') as HTMLInputElement | null;
-            let displayName = 'María Teresa';
-            if (emailInput?.value) {
-                const parts = emailInput.value.split('@');
-                displayName = parts[0].charAt(0).toUpperCase() + parts[0].slice(1);
-            }
-
-            showLoginSuccess(displayName, '¡Acceso Exitoso!');
-        }
-
-        if (target.id === 'registerForm') {
-            e.preventDefault();
-
-            const nameInput = document.getElementById('registerName') as HTMLInputElement | null;
-            let displayName = nameInput?.value.trim() || 'María Teresa';
-            if (displayName) {
-                displayName = displayName.split(' ')[0];
-            }
-
-            showLoginSuccess(displayName, '¡Registro Exitoso!');
-        }
-    });
-
-    document.addEventListener('click', (e) => {
-        const toggleBtn = (e.target as Element).closest('.loginPasswordToggle');
-        if (toggleBtn) {
-            const group = toggleBtn.closest('.loginInputGroup');
-            const input = group?.querySelector('.loginInputField') as HTMLInputElement | null;
-            const icon = toggleBtn.querySelector('i');
-            if (input && icon) {
-                if (input.type === 'password') {
-                    input.type = 'text';
-                    icon.classList.remove('bi-eye');
-                    icon.classList.add('bi-eye-slash');
-                } else {
-                    input.type = 'password';
-                    icon.classList.remove('bi-eye-slash');
-                    icon.classList.add('bi-eye');
-                }
-            }
-        }
-    });
-
-    document.addEventListener('click', (e) => {
-        const tab = (e.target as Element).closest('.loginTab');
-        if (tab) {
-            const container = tab.closest('.loginTabs');
-            if (container) {
-                const targetTab = tab.getAttribute('data-tab');
-                if (targetTab === 'login') {
-                    setLoginSlide(0);
-                } else if (targetTab === 'register') {
-                    setLoginSlide(1);
-                }
-            }
-        }
-    });
-
-    document.addEventListener('click', (e) => {
-        if ((e.target as Element).closest('.accessclientBtn')) {
-            e.preventDefault();
-            openLogin();
-        }
-    });
-
-    document.addEventListener('click', (e) => {
-        if ((e.target as Element).closest('.loginCloseBtn, .successCloseBtn')) {
-            closeLogin();
-            return;
-        }
-        if (loginModule && e.target === loginModule) {
-            closeLogin();
-        }
-        if ((e.target as Element).closest('.loginForgotLink')) {
-            e.preventDefault();
-        }
-    });
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && loginModule && loginModule.classList.contains('active')) {
-            closeLogin();
-        }
-    });
+    initLoginController({ authService: getAuthService() });
 
     requestAnimationFrame(physicsLoop);
 }

@@ -6574,6 +6574,27 @@ span.toastText {
     font-family: inherit;
 }
 
+.loginPhoneRow {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    width: 100%;
+}
+
+.loginPhonePrefix {
+    flex-shrink: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2d3748;
+    letter-spacing: -0.3px;
+    user-select: none;
+}
+
+.loginPhoneField {
+    flex: 1;
+    min-width: 0;
+}
+
 .loginPasswordToggle {
     background: none;
     border: none;
@@ -6641,6 +6662,27 @@ span.toastText {
 
 .loginSubmitBtn:active {
     transform: scale(0.98);
+}
+
+.loginSubmitBtn:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.loginFormError {
+    margin: -0.35rem 0 0.85rem;
+    padding: 0.75rem 0.95rem;
+    border-radius: 0.85rem;
+    background: #fff5f5;
+    color: #d92b20;
+    font-size: 0.86rem;
+    font-weight: 500;
+    line-height: 1.35;
+    border: 1px solid rgba(217, 43, 32, 0.15);
+}
+
+.loginFormError[hidden] {
+    display: none;
 }
 
 /* Botones Sociales */
@@ -6802,12 +6844,12 @@ span.toastText {
 
 .loginSliderTrack {
     display: flex;
-    width: 300%;
+    width: 500%;
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .loginSlide {
-    width: 33.3333%;
+    width: 20%;
     flex-shrink: 0;
     box-sizing: border-box;
 }
@@ -6940,4 +6982,230 @@ span.toastText {
         transform: scale(1);
         opacity: 1;
     }
+}
+
+/* Sesión y menú de cuenta */
+.loginSessionLoader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    min-height: 220px;
+    color: #4a5568;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.loginSessionLoader i {
+    font-size: 1.8rem;
+    color: #04b1a1;
+    animation: spin 0.9s linear infinite;
+}
+
+.loginSessionLoader[hidden],
+.loginSessionExpired[hidden] {
+    display: none;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.loginSessionExpired {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.55rem;
+    margin-bottom: 1rem;
+    padding: 0.85rem 1rem;
+    border-radius: 0.9rem;
+    background: #fff8e8;
+    border: 1px solid rgba(255, 69, 71, 0.18);
+    color: #7d1e1f;
+    font-size: 0.88rem;
+    line-height: 1.4;
+}
+
+.loginSessionExpired i {
+    color: #ff4547;
+    font-size: 1rem;
+}
+
+.loginSessionExpiredLink {
+    font-weight: 700;
+    color: #04b1a1;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.loginProfileBackBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 0.5rem;
+    padding: 0;
+    background: none;
+    border: none;
+    color: #04b1a1;
+    font-size: 0.92rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.loginProfileBackBtn:hover {
+    color: #049a8b;
+}
+
+.accountMenuContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem 0.2rem 0.25rem;
+}
+
+.accountSubmenu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    margin-bottom: 1.25rem;
+}
+
+.accountSubmenuItem {
+    width: 100%;
+    min-height: 52px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 1rem;
+    background: #fff;
+    color: #2d3748;
+    font-size: 0.98rem;
+    font-weight: 600;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.accountSubmenuItem:hover {
+    border-color: #04b1a1;
+    background: rgba(4, 177, 161, 0.05);
+    transform: translateY(-1px);
+}
+
+.accountSubmenuItem i:first-child {
+    font-size: 1.2rem;
+    color: #04b1a1;
+}
+
+.accountSubmenuArrow {
+    color: #a0aec0;
+    font-size: 0.9rem;
+}
+
+.accountSubmenuItem--logout i:first-child {
+    color: #d92b20;
+}
+
+.accountSubmenuItem--logout:hover {
+    border-color: rgba(217, 43, 32, 0.25);
+    background: #fff5f5;
+}
+
+.accountComingSoonNotice {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin: -0.35rem 0 1rem;
+    padding: 0.85rem 1rem;
+    border-radius: 0.9rem;
+    background: linear-gradient(135deg, #fff8e6 0%, #ffe8cc 100%);
+    border: 1.5px solid rgba(245, 158, 11, 0.45);
+    color: #9a3412;
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.35;
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.12);
+    animation: accountNoticeIn 0.35s ease;
+}
+
+.accountComingSoonNotice[hidden] {
+    display: none;
+}
+
+.accountComingSoonNotice i {
+    flex-shrink: 0;
+    font-size: 1.15rem;
+    color: #ea580c;
+}
+
+.accountComingSoonNotice p {
+    margin: 0;
+}
+
+@keyframes accountNoticeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.loginPageCard--profile {
+    max-width: 520px;
+}
+
+.profileSummary {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.profileSummaryRow {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.85rem 1rem;
+    border-radius: 0.9rem;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(25, 23, 28, 0.08);
+}
+
+.profileSummaryRow span {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: rgba(25, 23, 28, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.profileSummaryRow strong {
+    font-size: 0.98rem;
+    color: var(--color-text);
+}
+
+.profileStatus {
+    font-size: 0.88rem;
+    line-height: 1.45;
+    color: rgba(25, 23, 28, 0.62);
 }
